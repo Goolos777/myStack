@@ -17,7 +17,7 @@ public:
 	Stack() :head(nullptr){}
 	~Stack()
 	{
-		Node tmp = head;
+	//	Node tmp = head;
 		while (head)
 		{
 			//выт€гиваем и удал€ем элемент
@@ -26,33 +26,15 @@ public:
 	// установить в стек
 	void push(T val)
 	{
-		Note* tmp;
-		tmp = new Node;
-		tmp->elem = val;
-		tmp->next = nullptr;
-		if (head == nulptr)
-		{
-			head = tmp;
-			return;
-		}
-		Note* tmp2 = head;
-		while (true)
-		{
-			if (tmp2->next == nullptr)
-			{
-				tmp2->next = tmp;
-				return;
-			}
-		}
+		
 	}
 	//достать из стека
-	T top()
+	T pop()
 	{
 		
-
+		return *head;
 
 	}
-	void pop();
-	void print();
+	
 };
 
