@@ -15,26 +15,24 @@ class Stack
 	Node *head;
 public:
 	Stack() :head(nullptr){}
-	~Stack()
+	~Stack(){ while (!head){pop();}	}
+	//поставить первым
+	void push(T &orig)
 	{
-	//	Node tmp = head;
-		while (head)
-		{
-			//вытягиваем и удаляем элемент
-		}
+		Node *origNode = new Node(nullptr, orig);
+		if (head) {	origNode->next = head;	}
+		head = &origNode;
 	}
-	// установить в стек
-	void push(T val)
+	//удалить первого
+	void pop()
 	{
-		
+		Node *origNode = head;
+		head = origNode->next;
+		delete head;
 	}
-	//достать из стека
-	T pop()
-	{
-		
-		return *head;
-
-	}
+	//возвращает первый элемент
+	T top(){ return &head;	}
+	
 	
 };
 
