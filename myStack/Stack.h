@@ -45,6 +45,37 @@ public:
 		}
 	}
 	//возвращает первый элемент
-	T top(){ return head->elemet; }
+	T peek(){ return head->elemet; }
+	//возвращает первый элемент и удаляет его из стека
+	T top()
+	{ 
+		T tmp = Peek();
+		pop();
+	}
+	//проверяет, содержится ли некоторый элемент в стеке
+	bool contains(const T& orig)
+	{
+		Node *tmp = head;
+		while (tmp)
+		{
+			if (tmp->elemet == orig)return true;
+			tmp = tmp->next;
+		}
+		return false;
+	}
+	//Добавить элемент можно, только если он меньше, чем предыдущий
+	void push2(const T orig)
+	{
+		if (orig < peek())push(orig);
+	}
+	//Добавить элемент можно, только если такого элемента ещё нет в стеке.
+	void push3(const T orig)
+	{
+		if (!contains(orig))
+		{
+			push(orig);
+		}
+	}
+
 };
 

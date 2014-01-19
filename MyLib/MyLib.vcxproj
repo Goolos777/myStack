@@ -79,9 +79,7 @@
     <ClInclude Include="..\myStack\Stack.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\myStack\Matryoshka.cpp" />
     <ClCompile Include="..\myStack\MyString.cpp" />
-    <ClCompile Include="..\myStack\Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

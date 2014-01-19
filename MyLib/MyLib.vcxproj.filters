@@ -29,13 +29,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\myStack\Matryoshka.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\myStack\MyString.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\myStack\Source.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
