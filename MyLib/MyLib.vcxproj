@@ -77,9 +77,11 @@
     <ClInclude Include="..\myStack\Calc.h" />
     <ClInclude Include="..\myStack\MyString.h" />
     <ClInclude Include="..\myStack\Stack.h" />
+    <ClInclude Include="Brackets.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\myStack\MyString.cpp" />
+    <ClCompile Include="Brackets.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

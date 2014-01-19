@@ -1,6 +1,6 @@
+#pragma once
 #include "gtest\gtest.h"
-#include "myStack\MyString.h"
-
+#include "MyString.h"
 TEST(String, TEST)
 {
 	String str("0123456789");

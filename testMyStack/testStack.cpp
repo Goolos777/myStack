@@ -1,8 +1,10 @@
+
 #include "gtest\gtest.h"
-#include "myStack\Stack.h""
+#include "MyStack.h"
 
 
-TEST(Stack, TEST_OnePush)
+
+TEST(tastStack, TEST_OnePush)
 {
 	Stack<int> stack;
 	stack.push(4);
