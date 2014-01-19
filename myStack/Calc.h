@@ -6,6 +6,7 @@ using namespace std;
 class Calc
 {
 	Stack<char> matryoshka;
+	Stack<int>numbers;
 public:
 	Calc();
 	~Calc();

@@ -21,16 +21,17 @@ TEST(Stack, TESTfor)
 {
 	Stack<int> stack;
 	int length(5);
-
-	//stack.push(2);
-	//stack.pop();
-
-	/*
-	for (int i = 0; i <= length; i++)	{stack.push(i);	}
+	for (int i = 0; i <= length; i++)	{ stack.push(i); }
 	for (int i = length; i >= 0; i--)
 	{
 		EXPECT_EQ(stack.top(), i);
 		stack.pop();
 	}
-	*/
+}
+TEST(Stack, TESTpop)
+{
+	Stack<int> stack;
+	stack.push(2);
+	stack.pop();
+	stack.pop();
 }
