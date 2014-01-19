@@ -3,7 +3,7 @@
 #include <string>
 #include "Stack.h"
 using namespace std;
-class Calc
+class Calc 
 {
 	Stack<char> matryoshka;
 	Stack<int>numbers;
