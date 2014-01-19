@@ -9,6 +9,7 @@ class Stack
 {
 	struct Node
 	{
+		Node(const T&orig) :elemet(orig), next(nullptr){};
 		Node *next;
 		T elemet;
 	};
@@ -17,21 +18,21 @@ public:
 	Stack() :head(nullptr){}
 	~Stack(){ while (!head){pop();}	}
 	//поставить первым
-	void push(T &orig)
+	void push(const T &orig)
 	{
-		Node *origNode = new Node(nullptr, orig);
+		Node *origNode = new Node(orig);
 		if (head) {	origNode->next = head;	}
-		head = &origNode;
+		head = origNode;
 	}
 	//удалить первого
 	void pop()
 	{
 		Node *origNode = head;
 		head = origNode->next;
-		delete head;
+		delete origNode;
 	}
 	//возвращает первый элемент
-	T top(){ return &head;	}
+	T top(){ return head->elemet; }
 	
 	
 };
