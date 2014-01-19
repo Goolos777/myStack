@@ -40,7 +40,7 @@ public:
 		}
 		else
 		{
-			cout << "empty stack";
+			cout << "empty stack\n";
 		}
 	}
 	//возвращает первый элемент
@@ -71,5 +71,10 @@ public:
 		{
 			push(orig);
 		}
+	}
+	//проверка пустого стека
+	bool isEmpty()
+	{
+		return !head;
 	}
 };

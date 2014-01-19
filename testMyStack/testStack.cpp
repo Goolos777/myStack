@@ -70,3 +70,11 @@ TEST(Stack, TESTpush3)
 	stack.push3(11);
 	EXPECT_EQ(stack.peek(), 11);
 }
+
+TEST(Stack, TESTisEmpty)
+{
+	Stack<int> stack;
+	EXPECT_TRUE(stack.isEmpty());
+	stack.push(1);
+	EXPECT_FALSE(stack.isEmpty());
+}

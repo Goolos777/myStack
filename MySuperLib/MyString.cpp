@@ -1,7 +1,7 @@
 #include "MyString.h"
 #include <stdexcept>
 using namespace std;
-#include "MyString.h"
+
 
 String::String()//80 символов минимально
 {

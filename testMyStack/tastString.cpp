@@ -1,7 +1,7 @@
 #pragma once
 #include "gtest\gtest.h"
 #include "MyString.h"
-TEST(String, TEST)
+TEST(String, TESTgetChars)
 {
 	String str("0123456789");
 	int length = 9;
@@ -12,4 +12,13 @@ TEST(String, TEST)
 		EXPECT_EQ(a, i);
 	}
 
+}
+TEST(String, getLength)
+{
+	String str("0123456789");
+	int length = 10;	
+	EXPECT_EQ(length, str.getLength());
+	str="фывапрол";
+	length = 8;
+	EXPECT_EQ(length, str.getLength());
 }
