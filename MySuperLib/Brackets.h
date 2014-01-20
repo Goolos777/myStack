@@ -24,8 +24,10 @@
 class Brackets
 {
 	Stack<int>stack;
+	String brackets;
+	int findBrackets(const char&,const String&);
 public:
-	Brackets() :stack(){}
+	Brackets() :stack(), brackets("([{<)]}>"){}
 	bool checkBrackets(String str);
 };
 
