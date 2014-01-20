@@ -46,4 +46,7 @@ public:
 	bool String::operator>(String str){ return strcmp(chars, str) > 0 ? true : false; }
 	String & operator= (const String& orig);
 	~String(){ delete[] chars; };
+
+	int String::getInt(int number)const;
+	
 };

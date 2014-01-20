@@ -51,6 +51,7 @@ public:
 	{
 		T tmp = Peek();
 		pop();
+		return tmp;
 	}
 	//проверяет, содержится ли некоторый элемент в стеке
 	bool contains(const T& orig)

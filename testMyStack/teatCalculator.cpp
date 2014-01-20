@@ -10,5 +10,5 @@ TEST(Calculator, TESTfalse)
 TEST(Calculator, TESTnumber)
 {
 	Calculator calc;
-	EXPECT_EQ(calc.expression("123456789="), 1);
+	EXPECT_EQ(calc.expression("123456789="), 123456789);
 }

@@ -166,3 +166,9 @@ String & String::operator= (const String& orig)
 	chars = new char[capaciti];
 	strcpy(chars, orig.getChars());
 }
+
+int String::getInt(int number)const
+{
+	char tempChar = chars[number];
+	return  atoi(&tempChar);
+}

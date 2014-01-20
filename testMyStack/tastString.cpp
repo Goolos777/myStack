@@ -22,3 +22,11 @@ TEST(String, getLength)
 	length = 8;
 	EXPECT_EQ(length, str.getLength());
 }
+
+TEST(String, getRevers)
+{
+	String str("0123456789=");
+	str.revers();
+	EXPECT_EQ(str, "=9876543210");
+	
+}
