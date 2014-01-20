@@ -3,6 +3,7 @@
 
 bool Brackets::checkBrackets(String str)
 {
+	Stack<int>stack;
 	for (size_t i = 0; i < str.getLength(); i++)
 	{
 		int tmp = findBrackets(str.getChars(i), brackets);

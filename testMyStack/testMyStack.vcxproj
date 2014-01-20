@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tastString.cpp" />
+    <ClCompile Include="teatCalculator.cpp" />
     <ClCompile Include="testBrackets.cpp" />
     <ClCompile Include="testStack.cpp" />
   </ItemGroup>

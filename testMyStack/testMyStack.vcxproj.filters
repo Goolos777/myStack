@@ -27,5 +27,8 @@
     <ClCompile Include="testBrackets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="teatCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
