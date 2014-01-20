@@ -49,7 +49,7 @@ public:
 	//возвращает первый элемент и удал€ет его из стека
 	T top()
 	{
-		T tmp = Peek();
+		T tmp = peek();
 		pop();
 		return tmp;
 	}

@@ -25,7 +25,7 @@ public:
 	const int getCapaciti()const{ return capaciti; }
 	void print()const{ cout << chars; }//печатает строку
 	void add(const char*, int poz = -1);//добавить к строке
-	void add(const char chars);
+	
 	void add(const  String&str){ add(str.getChars()); }//добавить к строке
 	void toLover(){ strupr(chars); }//все регистры вниз
 	void toUpp(){ strlwr(chars); }//все регистры вверх
@@ -48,5 +48,6 @@ public:
 	~String(){ delete[] chars; };
 
 	int String::getInt(int number)const;
+	void add(const char& chars);
 	
 };

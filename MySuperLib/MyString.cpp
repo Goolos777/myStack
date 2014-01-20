@@ -55,24 +55,34 @@ void String::add(const char* chars, int poz)//добавить к строке
 	}
 
 }
-void String::add(const char chars)//добавить к строке
+//добовляем символ к строке
+void String::add(const char& ch)
 {
-	if (capaciti<length + 2)
-	{
-		capaciti = 2 * capaciti;
-		char* tmp = new char[capaciti];
-		tmp[0] = 0;
-		strcat(tmp, this->chars);
-		this->chars[length] = chars;
-		delete[] this->chars;
-		this->chars = tmp;
-	}
-	else
-	{
-		this->chars[++length] = chars;
-		this->chars[length + 1] = 0;
-	}
+	chars[length++] = ch;
+	chars[length] = 0;
+
 }
+
+
+
+//void String::add(const char chars)//добавить к строке
+//{
+//	if (capaciti<length + 2)
+//	{
+//		capaciti = 2 * capaciti;
+//		char* tmp = new char[capaciti];
+//		tmp[0] = 0;
+//		strcat(tmp, this->chars);
+//		this->chars[length] = chars;
+//		delete[] this->chars;
+//		this->chars = tmp;
+//	}
+//	else
+//	{
+//		this->chars[++length] = chars;
+//		this->chars[length + 1] = 0;
+//	}
+//}
 
 bool String::IsNumber()//являеться ли строка числом
 {

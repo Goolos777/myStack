@@ -27,6 +27,14 @@ TEST(String, getRevers)
 {
 	String str("0123456789=");
 	str.revers();
-	EXPECT_EQ(str, "=9876543210");
+	EXPECT_STREQ(str, "=9876543210");
 	
+}
+
+TEST(String, addChar)
+{
+	String str("abc");
+	str.add('a');
+	EXPECT_STREQ(str, "abca");
+
 }

@@ -42,14 +42,16 @@ String Calculator::revers(int first, int last,const String& str)
 	{
 		newStr.add(st.top());
 	}
+	return newStr;
 }
 int Calculator::expression(const String& str)
 {
 	if (!chackTolerance(str))return 0;
-	String number = revers(0, str.getLength() - 2, str);
+	String number = revers(0, str.getLength() - 1, str);
 	int numeric(0);
-	for (size_t i = 0; i < str.getLength(); i++)
+	for (size_t i = 0; i < number.getLength(); i++)
 	{
-			numeric += str.getInt(i)*pow(10, i);
+		numeric += number.getInt(i)*pow(10, i);
 	}
+	return numeric;
 }
