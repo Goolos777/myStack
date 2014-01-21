@@ -8,10 +8,10 @@ bool Brackets::checkBrackets(String str)
 	for (size_t i = 0; i < str.getLength(); i++)
 	{
 		int tmp = findBrackets(str.getChars(i), brackets);
-		if (tmp < 4) stack.push(tmp);
-		else if (tmp <= 8)
+		if (tmp < brackets.getLength()/2) stack.push(tmp);
+		else if (tmp <= brackets.getLength())
 		{
-			if (stack.peek() == tmp % 4) stack.pop();
+			if (stack.peek() == tmp % (brackets.getLength()/2)) stack.pop();
 			else return false;
 		}
 	}
