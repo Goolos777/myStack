@@ -14,11 +14,27 @@ class QueuePriority
 		T getData(){ return data; }
 		int getPriority(){ return priority; }
 		BaseType *before;		   		//перед
-		BaseType *back;					 //сзади
 	};
 	BaseType *head;
-	BaseType *tail;
-	
+	void pop()
+	{
+		if (head)
+		{
+			Node *origNode = head;
+			head = origNode->next;
+			delete origNode;
+		}
+		else
+		{
+			cout << "empty stack\n";
+		}
+	}
+	void insertBaseType(BaseType base, BaseType newbase)
+	{
+		newbase->back = base;
+		newbase->before = base->before;
+		base->before = newbase;
+	}
 public:
 	QueuePriority() :head(nullptr), tail(nullptr){}
 	~QueuePriority();
@@ -36,25 +52,23 @@ public:
 			в которой последовательность элементов все врем€ 
 			поддерживаетс€ упор€доченной по убыванию приоритета. 
 			*/
+			BaseType *tmp2 = head;
+			do
+			{
+				if (prion > tmp2->getPriority())
+				{
+					insertBaseType(tmp2, tmp1);
+					break;
+				}
 
+
+			} while (true);
 
 
 		}
 
 	}
-	void pop()
-	{
-		if (head)
-		{
-			Node *origNode = head;
-			head = origNode->next;
-			delete origNode;
-		}
-		else
-		{
-			cout << "empty stack\n";
-		}
-	}
+	
 	T pullQueue()//выход из очереди
 	{
 		BaseType *tmp = head;

@@ -81,11 +81,13 @@
     <ClInclude Include="MyStack.h" />
     <ClInclude Include="MyString.h" />
     <ClInclude Include="QueuePriority.h" />
+    <ClInclude Include="Store.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Brackets.cpp" />
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="MyString.cpp" />
+    <ClCompile Include="Store.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
