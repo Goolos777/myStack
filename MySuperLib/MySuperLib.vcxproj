@@ -87,7 +87,6 @@
     <ClCompile Include="Brackets.cpp" />
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="Store.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

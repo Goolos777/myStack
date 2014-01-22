@@ -2,42 +2,20 @@
 //реализовать очередь с приоритетным включением
 #pragma once
 template <class T>
-class QueuePriority
+class QueuePriority : public Store<T>
 {
-	template <class T>
-	class BaseType
-	{
-		T data;                           // Данные
-		int priority;
-	public:
-		BaseType(T data, int prior=1):data(data), priority(prior),before(nullptr),back(nullptr);
-		T getData(){ return data; }
-		int getPriority(){ return priority; }
-		BaseType *before;		   		//перед
-	};
-	BaseType *head;
-	void pop()
-	{
-		if (head)
-		{
-			Node *origNode = head;
-			head = origNode->next;
-			delete origNode;
-		}
-		else
-		{
-			cout << "empty stack\n";
-		}
-	}
-	void insertBaseType(BaseType base, BaseType newbase)
-	{
-		newbase->back = base;
-		newbase->before = base->before;
-		base->before = newbase;
-	}
+	
+	
 public:
-	QueuePriority() :head(nullptr), tail(nullptr){}
-	~QueuePriority();
+	QueuePriority(){}
+	~QueuePriority(){}
+
+
+
+
+
+
+
 	void pushQueue(const T& orig, int prior = 1)//включение в очередь
 	{
 		BaseType *tmp = new BaseType(orig, prior);
