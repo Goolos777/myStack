@@ -18,16 +18,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tastString.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="testStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="testBrackets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="teatCalculator.cpp">
+    <ClCompile Include="testCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testQP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

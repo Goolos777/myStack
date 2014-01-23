@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 template <class T>
 class Store
 {
@@ -18,11 +20,33 @@ protected:
 public:
 	Store() :head(nullptr){};
 
-	virtual void push(const T &orig) = 0;//установить элемент
-	virtual void pop()=0;//удалить элемент
-	virtual T peek()=0;//возвращает текущий элемент
-	virtual T top()=0;//возвращает текущей  элемент и удаляет его из хранилища
+	virtual void push(const T &orig, int priority=1) = 0;//установить элемент
+	
+	//возвращает первый элемент и удаляет его из стека
+	T top()
+	{
+		T tmp = peek();
+		pop();
+		return tmp;
+	}
 
+	//возвращает первый элемент
+	T peek(){ return head->getData(); }
+
+	//удалить первого
+	void pop()
+	{
+		if (head)
+		{
+			BaseType<T> *origNode = head;
+			head = origNode->next;
+			delete origNode;
+		}
+		else
+		{
+			cout << "empty stack\n";
+		}
+	}
 	//проверяет, содержится ли некоторый элемент в стеке
 	bool contains(const T& orig)
 	{
